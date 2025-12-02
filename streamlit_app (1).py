@@ -40,7 +40,6 @@ st.header("🔍 Enter Student Information")
 col1, col2 = st.columns(2)
 
 with col1:
-    MBA_Percentage           = st.number_input("MBA Percentage", 0.0, 100.0, 70.0)
     SSC_Percentage           = st.number_input("SSC Percentage", 0.0, 100.0, 80.0)
     HSC_Percentage           = st.number_input("HSC Percentage", 0.0, 100.0, 75.0)
     Graduation_Percentage    = st.number_input("Graduation Percentage", 0.0, 100.0, 72.0)
@@ -63,7 +62,6 @@ Age = st.number_input("Age", 15, 80, 24)
 
 # Build input dataframe in original form
 input_base = {
-    "MBA_Percentage": MBA_Percentage,
     "SSC_Percentage": SSC_Percentage,
     "HSC_Percentage": HSC_Percentage,
     "Graduation_Percentage": Graduation_Percentage,
@@ -95,7 +93,6 @@ if st.button("🚀 Predict Placement"):
             "HR": [0.0, 0.0, 1.0]
         }[spec]
         arr = np.array([
-            input_base["MBA_Percentage"],
             input_base["SSC_Percentage"],
             input_base["HSC_Percentage"],
             input_base["Graduation_Percentage"],
